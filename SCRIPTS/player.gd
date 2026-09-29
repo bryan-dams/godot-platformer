@@ -17,4 +17,9 @@ func _physics_process(delta):
 
 func take_damage():
 	health -= 1
-	print("Vida: ", health)
+
+	$Sprite2D.modulate = Color(1, 0.3, 0.3)
+
+	await get_tree().create_timer(0.15).timeout
+
+	$Sprite2D.modulate = Color(1, 1, 1)
