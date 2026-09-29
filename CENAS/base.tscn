@@ -2,9 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://bya5tq7d2rncp" path="res://CENAS/player.tscn" id="1_rwxyx"]
 [ext_resource type="Texture2D" uid="uid://ce536377vnea" path="res://SPRITES/Sprite-0002.png" id="2_vceyb"]
+[ext_resource type="PackedScene" uid="uid://c1iipoob2gcv2" path="res://CENAS/cactus.tscn" id="3_117fw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwxyx"]
-size = Vector2(800, 50)
+size = Vector2(800, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vceyb"]
+size = Vector2(31, 10)
 
 [node name="Level1" type="Node2D" unique_id=2092711970]
 
@@ -15,9 +19,34 @@ position = Vector2(200, 200)
 position = Vector2(427, 388)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=378925399]
-position = Vector2(0, 32)
+position = Vector2(0, 32.5)
 shape = SubResource("RectangleShape2D_rwxyx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground" unique_id=1670632463]
 position = Vector2(-224, 5)
 texture = ExtResource("2_vceyb")
+
+[node name="Platform" type="StaticBody2D" parent="." unique_id=1654672490]
+position = Vector2(478, 324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" unique_id=1695788392]
+position = Vector2(-0.5, 8)
+shape = SubResource("RectangleShape2D_vceyb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform" unique_id=410389366]
+texture = ExtResource("2_vceyb")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=1782563500]
+position = Vector2(605, 275)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=415062504]
+position = Vector2(-0.5, 8)
+shape = SubResource("RectangleShape2D_vceyb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform2" unique_id=1445289961]
+texture = ExtResource("2_vceyb")
+
+[node name="cactus" parent="." unique_id=1745474210 instance=ExtResource("3_117fw")]
+position = Vector2(602, 370)
+
+[connection signal="body_entered" from="cactus" to="cactus" method="_on_body_entered"]

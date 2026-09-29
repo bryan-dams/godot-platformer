@@ -2,6 +2,7 @@ extends CharacterBody2D
 var speed = 200.0
 var gravity = 1000.0
 var jump_force = 400.0
+var health = 3
 
 func _physics_process(delta):
 	
@@ -13,3 +14,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = -jump_force
 	move_and_slide()
+
+func take_damage():
+	health -= 1
+	print("Vida: ", health)

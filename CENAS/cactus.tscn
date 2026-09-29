@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c1iipoob2gcv2"]
+
+[ext_resource type="Script" uid="uid://chhs06b26wbw1" path="res://SCRIPTS/cactus.gd" id="1_5lvhk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrkjc"]
+size = Vector2(9, 23)
+
+[node name="cactus" type="Area2D" unique_id=1745474210]
+position = Vector2(0, -26)
+script = ExtResource("1_5lvhk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2092176741]
+position = Vector2(0, 14)
+shape = SubResource("RectangleShape2D_jrkjc")
