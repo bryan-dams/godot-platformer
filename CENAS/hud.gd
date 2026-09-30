@@ -1,7 +1,9 @@
 extends CanvasLayer
 
+var max_health = 3
+
 func _ready():
-	update_health(3)
+	update_health(max_health)
 
 func update_health(health):
 	$HBoxContainer/Heart1.visible = health >= 1
