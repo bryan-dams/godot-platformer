@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bya5tq7d2rncp" path="res://CENAS/player.tscn" id="1_rwxyx"]
 [ext_resource type="Texture2D" uid="uid://ce536377vnea" path="res://SPRITES/Sprite-0002.png" id="2_vceyb"]
 [ext_resource type="PackedScene" uid="uid://c1iipoob2gcv2" path="res://CENAS/cactus.tscn" id="3_117fw"]
+[ext_resource type="PackedScene" uid="uid://dovkvf1mpgf7" path="res://CENAS/hud.tscn" id="4_hp4v2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwxyx"]
 size = Vector2(800, 49)
@@ -22,8 +23,56 @@ position = Vector2(427, 388)
 position = Vector2(0, 32.5)
 shape = SubResource("RectangleShape2D_rwxyx")
 
-[node name="Sprite2D" type="Sprite2D" parent="Ground" unique_id=1670632463]
+[node name="chao12" type="Sprite2D" parent="Ground" unique_id=141728309]
+position = Vector2(84, 3)
+texture = ExtResource("2_vceyb")
+
+[node name="chao1" type="Sprite2D" parent="Ground" unique_id=1670632463]
 position = Vector2(-224, 5)
+texture = ExtResource("2_vceyb")
+
+[node name="chao13" type="Sprite2D" parent="Ground" unique_id=1143608997]
+position = Vector2(205, 4)
+texture = ExtResource("2_vceyb")
+
+[node name="chao2" type="Sprite2D" parent="Ground" unique_id=1333635035]
+position = Vector2(264, 5)
+texture = ExtResource("2_vceyb")
+
+[node name="chao3" type="Sprite2D" parent="Ground" unique_id=702408464]
+position = Vector2(436, 5)
+texture = ExtResource("2_vceyb")
+
+[node name="chao4" type="Sprite2D" parent="Ground" unique_id=482590313]
+position = Vector2(173, 4)
+texture = ExtResource("2_vceyb")
+
+[node name="chao5" type="Sprite2D" parent="Ground" unique_id=1473732449]
+position = Vector2(-128, 4)
+texture = ExtResource("2_vceyb")
+
+[node name="chao6" type="Sprite2D" parent="Ground" unique_id=1272836646]
+position = Vector2(-96, 4)
+texture = ExtResource("2_vceyb")
+
+[node name="chao7" type="Sprite2D" parent="Ground" unique_id=637122970]
+position = Vector2(52, 4)
+texture = ExtResource("2_vceyb")
+
+[node name="chao8" type="Sprite2D" parent="Ground" unique_id=279235626]
+position = Vector2(-256, 5)
+texture = ExtResource("2_vceyb")
+
+[node name="chao9" type="Sprite2D" parent="Ground" unique_id=1040481554]
+position = Vector2(-160, 5)
+texture = ExtResource("2_vceyb")
+
+[node name="chao10" type="Sprite2D" parent="Ground" unique_id=2021115199]
+position = Vector2(-192, 5)
+texture = ExtResource("2_vceyb")
+
+[node name="chao11" type="Sprite2D" parent="Ground" unique_id=907244460]
+position = Vector2(-65, 4)
 texture = ExtResource("2_vceyb")
 
 [node name="Platform" type="StaticBody2D" parent="." unique_id=1654672490]
@@ -46,7 +95,7 @@ shape = SubResource("RectangleShape2D_vceyb")
 [node name="Sprite2D" type="Sprite2D" parent="Platform2" unique_id=1445289961]
 texture = ExtResource("2_vceyb")
 
-[node name="cactus" parent="." unique_id=1745474210 instance=ExtResource("3_117fw")]
-position = Vector2(602, 370)
+[node name="cactus" parent="." unique_id=1921755503 instance=ExtResource("3_117fw")]
+position = Vector2(616, 353)
 
-[connection signal="body_entered" from="cactus" to="cactus" method="_on_body_entered"]
+[node name="HUD" parent="." unique_id=974173020 instance=ExtResource("4_hp4v2")]

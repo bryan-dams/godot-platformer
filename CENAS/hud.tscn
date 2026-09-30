@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dovkvf1mpgf7"]
+
+[ext_resource type="Texture2D" uid="uid://cm6cn8gyd8wya" path="res://SPRITES/Sprite-0005.png" id="1_iaiia"]
+[ext_resource type="Script" uid="uid://uc0e0k7y4qnf" path="res://CENAS/hud.gd" id="1_xh2pc"]
+
+[node name="HUD" type="CanvasLayer" unique_id=974173020]
+script = ExtResource("1_xh2pc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=544185580]
+offset_left = -8.0
+offset_right = 32.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="Heart1" type="TextureRect" parent="HBoxContainer" unique_id=1445423115]
+layout_mode = 2
+texture = ExtResource("1_iaiia")
+expand_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="HBoxContainer" unique_id=781858122]
+layout_mode = 2
+texture = ExtResource("1_iaiia")
+expand_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="HBoxContainer" unique_id=1355154818]
+layout_mode = 2
+texture = ExtResource("1_iaiia")
+expand_mode = 2
