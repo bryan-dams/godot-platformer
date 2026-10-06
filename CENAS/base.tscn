@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ce536377vnea" path="res://SPRITES/Sprite-0002.png" id="2_vceyb"]
 [ext_resource type="PackedScene" uid="uid://c1iipoob2gcv2" path="res://CENAS/cactus.tscn" id="3_117fw"]
 [ext_resource type="PackedScene" uid="uid://dovkvf1mpgf7" path="res://CENAS/hud.tscn" id="4_hp4v2"]
+[ext_resource type="PackedScene" uid="uid://dh5rwspb7cnhm" path="res://CENAS/death_zone.tscn" id="5_6ejq4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vceyb"]
 size = Vector2(31, 10)
@@ -52,3 +53,6 @@ tile_map_data = PackedByteArray("AAAMABYAAQAAAAEAAAANABYAAQABAAEAAAAOABYAAQAAAAE
 tile_set = SubResource("TileSet_4kxuq")
 
 [node name="HUD" parent="." unique_id=974173020 instance=ExtResource("4_hp4v2")]
+
+[node name="DeathZone" parent="." unique_id=949520348 instance=ExtResource("5_6ejq4")]
+position = Vector2(689, 628)

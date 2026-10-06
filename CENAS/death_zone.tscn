@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dh5rwspb7cnhm"]
+
+[ext_resource type="Script" uid="uid://bd4nvpisrcknf" path="res://CENAS/death_zone.gd" id="1_u00db"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kxuq"]
+size = Vector2(2491, 20)
+
+[node name="DeathZone" type="Area2D" unique_id=949520348]
+position = Vector2(6, -12)
+script = ExtResource("1_u00db")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=550771225]
+position = Vector2(1, 13)
+shape = SubResource("RectangleShape2D_4kxuq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

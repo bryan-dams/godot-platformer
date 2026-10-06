@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://cneptjvo3wk3i" path="res://SPRITES/Sprite-0004.png" id="2_0sq3l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jrkjc"]
-size = Vector2(26, 28)
+size = Vector2(24, 17)
 
 [node name="cactus" type="Area2D" unique_id=1921755503]
 position = Vector2(0, -18)
 script = ExtResource("1_5lvhk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=859531562]
-position = Vector2(1, 28)
+position = Vector2(1, 33.5)
 shape = SubResource("RectangleShape2D_jrkjc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=308812027]

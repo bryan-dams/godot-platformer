@@ -5,6 +5,7 @@ var gravity = 1000.0
 var jump_force = 400.0
 var health = 3
 var invulnerable = false
+var dead = false
 
 func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
@@ -38,5 +39,14 @@ func take_damage():
 	await get_tree().create_timer(0.55).timeout
 
 	invulnerable = false
+	
 func die():
+	if dead:
+		return
+
+	dead = true
+ 	
+	$Sprite2D.visible = false
+	
+	await get_tree().create_timer(1.0).timeout
 	get_tree().reload_current_scene()
